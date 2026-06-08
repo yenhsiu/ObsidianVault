@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "c39af56e4675f578",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e11db59ce6b5299",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ccbc8f95e437d044",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "论文笔记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "论文笔记"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "205c858936d4e47c",
+    "type": "split",
+    "children": [
+      {
+        "id": "05731e586f6c1760",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5ab11c4d62d5c0c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0c89531591aa6c07",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e30d50e762a85598",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a14c3d644c309613",
+    "type": "split",
+    "children": [
+      {
+        "id": "fcf6fc529dd5b9e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8a0fda8d3387b640",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "ae1e7d11a3ecb2f2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Untitled.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "dc042c323a785283",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0ad328634a2efa10",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ea3d6a40abec9ada",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Untitled.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ccbc8f95e437d044",
+  "lastOpenFiles": [
+    "AgilePruner.md",
+    "_概念/11-深度学习基础/GELU.md",
+    "VEQ.md",
+    "论文笔记.md",
+    "TokenBitViT.md",
+    "TAH-Quant.md",
+    "_概念/11-深度学习基础/混合精度量化.md",
+    "_概念/11-深度学习基础/Vision Transformer.md",
+    "论文笔记/论文笔记.md",
+    "_概念/11-深度学习基础/AQ-SGD.md",
+    "_概念/11-深度学习基础/Group Quantization.md",
+    "_概念/11-深度学习基础/Group Quantization.md.tmp.5294.85d57d1d43e1",
+    "_概念/11-深度学习基础/Stochastic Gradient Descent.md",
+    "_概念/11-深度学习基础/Activation Quantization.md",
+    "_概念/11-深度学习基础/Pipeline Parallelism.md",
+    "_概念/11-深度学习基础/Hadamard Transform.md",
+    "论文笔记/AgilePruner.md",
+    "论文笔记",
+    "_概念/11-深度学习基础/路由器亲和度.md",
+    "_概念/11-深度学习基础/AWQ.md",
+    "Untitled.canvas",
+    "2026-06-08.md",
+    "_概念/11-深度学习基础/混合专家模型.md",
+    "_概念/11-深度学习基础/专家路由.md",
+    "_概念/11-深度学习基础/MBQ.md",
+    "_概念/11-深度学习基础/Hessian矩阵.md",
+    "_概念/11-深度学习基础/GPTQ.md",
+    "_概念/11-深度学习基础/Frobenius范数.md",
+    "_概念/11-深度学习基础/11-深度学习基础.md"
+  ]
+}
