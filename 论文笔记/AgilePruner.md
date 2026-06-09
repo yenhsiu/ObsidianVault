@@ -27,7 +27,13 @@ created: 2026-06-08
 
 ## 一句话总结
 
-> 通过[[有效秩]]和[[注意力熵]]的实证分析发现，图像复杂度决定了应采用哪种[[视觉Token剪枝]]策略，并据此设计了一个自适应相似度阈值剪枝方法 AgilePruner，在 9 项多模态基准上以极低计算开销超越现有方法。
+> 通过[[有效秩]]來評估多項指標和[[注意力熵]]來調查visual token的處理機制並分析紛紛方法的優缺點。
+> 定量分析結果發現，
+> 	1. 很多多樣性導向的剪枝實際保留的多樣行遠低於預期，
+> 	2. 使用 CHAIR 資料集表明，它們保留的多樣性與幻覺頻率的增加密切相關。
+> 	3. 進一步觀察到attention-based的方法在簡單的image上有更有效，多樣性導像則跟是那些行複雜的token feature
+> 	4. 基於上述的視點，我們證明要依據image的複雜度來調整目前現有的兩種token pruning手法才能一致的提升效能。
+> 	5. 同時图像复杂度决定了应采用哪种[[视觉Token剪枝]]策略，并据此设计了一个自适应相似度阈值剪枝方法 AgilePruner，在 9 项多模态基准上以极低计算开销超越现有方法。
 
 ---
 
@@ -47,12 +53,35 @@ created: 2026-06-08
 
 ### 现有方法的局限
 
-- **基于注意力的剪枝**（如 [[FasterVLM]]、[[PruMerge+]]）：关注 CLS token 的注意力权重，倾向于选择视觉显著区域，但在需要综合多样化视觉证据的复杂场景下表现较弱。
+- **基于注意力的剪枝**（如 [[FasterVLM]]、[[PruMerge+]]）：关注 CLS token 的注意力权重，倾向于选择视觉显著区域，有選到重複選擇的問題。但在需要综合多样化视觉证据的复杂场景下表现较弱。
 - **基于多样性的剪枝**（如 [[DivPrune]]）：通过保留特征多样性来覆盖更多视觉信息，但实际上诱发更多[[幻觉]]（CHAIR 分数更差），原因是被保留的"多样"token 包含了低质量背景信息。
-
+- hybrid
+課題：不管是哪一種手法，目前都還是缺少足夠的特徵化
+1. 如何真實保留特徵以及空間
+2. 保留下的token的特性如何影響幻覺
+3. 是否不同的image適用的token pruning方法定律成立
 ### 本文的动机
-
+解決上述課題，本論文進行了兩部分的分析（？？？？）
+1. 使用effective rank（e-rank）量化保留的多樣化 並檢視erank跟幻覺以及圖片形體的關係
+2. 分析在圖像複雜度他們的有效性如何shift的
+分析顯示：
+- 多樣化的剪枝手法，保留的多樣性遠低於預期。同時保留越高的多型反而增加了幻覺的產生。
+- 圖片的複雜性，attention based適用於簡單的圖像（精華的token被集中在一小部分）devisty based適用於複雜的圖片，語意的訊息被分布在各方token
 两种范式的本质差异可通过[[注意力熵]]和[[有效秩]]两个度量来量化。如果能找到将图像复杂度（erank/熵）与剪枝策略选择相绑定的规律，就可以构建出自适应方案，避免固定策略带来的偏差。
+
+基於分析
+- 測試觀察到的現象可不可以直接被轉換成實際的加強
+- image-aware adjustment
+- threshold-based pruning procedure
+	- The method explores tokens in descending attention order and removes redundant tokens based on similarity, using an adaptively set threshold informed by image-level complexity
+	- 利用attention score 排序然後在用相似性移除多餘的token，同時依據image的複雜度來動態調整threshold
+		- 在個task上有最好的結果，同時減輕了幻覺的傾向
+		- -》說明不僅於分型在實際應用上也有效
+- 貢獻：
+	- 提出e-rank 評估手法
+	- 有一致的結果，證明了有效性
+	- 
+Q ： effective rank
 
 ---
 
